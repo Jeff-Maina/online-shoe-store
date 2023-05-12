@@ -136,7 +136,7 @@ export default function Home() {
               <img className="w-full" src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_855,c_limit/684545f4-1241-45b6-b1fb-832ec8f9d450/nike-just-do-it.jpg" alt="" />
             </div>
           </div>
-          <div className="w-full h-auto flex-col items-center justify-center">
+          <div className="w-full h-auto flex-col items-center justify-center pl-4">
           <h1 className="md:text-center md:text-[84px] text-6xl md:w-[8em] m-auto leading-[23px] md:leading-[58px] text-gray-900 font-passion_one tracking-tight md:my-16 md:mb-6 my-4">
             BRING THE ENERGY
           </h1>
