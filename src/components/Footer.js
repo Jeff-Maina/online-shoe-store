@@ -19,7 +19,7 @@ const Footer = () => {
     };
 
     return (  
-        <footer className="bg-black w-screen absolute h-auto bottom-0">
+        <footer className="bg-black w-full p-0 m-0 h-auto bottom-0 overflow-x-hidden">
             <div className="w-screen md:flex h-auto">
                 <div className="xl:w-1/6"></div>
                 <div className="w-auto md:h-full flex-col justify-center px-8 py-7">

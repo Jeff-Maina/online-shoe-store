@@ -15,6 +15,8 @@ module.exports = {
       fontFamily: {
         oswald: "Oswald",
         urbanist: "Urbanist, sans-serif",
+        Futura: "Futura",
+        passion_one: "Passion One"
     },
     },
   },

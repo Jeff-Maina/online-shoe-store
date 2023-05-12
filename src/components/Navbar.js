@@ -9,6 +9,11 @@ const Navbar = () => {
 	l6.3,6.3l-6.3,6.3C4.1,18.5,4,18.7,4,19c0,0.6,0.4,1,1,1c0.3,0,0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.4,0.3,0.7,0.3
 	s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L13.4,12z"></path></svg>
   const menuHeight = isMenuActive ? 'h-78 translate-y-0' : '-translate-y-full';
+  const toggleMainMenu = () => {
+    setMenuActive(!isMenuActive);
+    setMenuCategoryActive(false);
+    setMenuAccessoriesActive(false);
+  }
 
   // categories
 
@@ -41,8 +46,8 @@ const Navbar = () => {
 
 
   return (
-    <nav className="w-full h-20 border border-gray-200 flex justify-center relative">
-      <div className="xl:w-4/5 w-full h-full flex justify-between bg-white z-20">
+    <nav className="w-full h-20 border border-gray-200 flex justify-center fixed bg-white m-0 p-0 z-30">
+      <div className="xl:px-18 xl:pr-20 w-full h-full flex justify-between bg-white z-20">
         <div className="h-full w-40 flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +103,7 @@ const Navbar = () => {
                 }}
             n  onMouseLeave={()=>{
                 setCategoriesActive(false)
-              }} className={`absolute w-48 translate-y-[0px] translate-x-[-46px] border border-t-0 h-auto p-4 pb-2 z-10 ${categoryClass}`}>
+              }} className={`absolute w-48 translate-y-[0px] translate-x-[-46px] bg-white border border-t-0 h-auto p-4 pb-2 z-10 ${categoryClass}`}>
                 <h6 className="text-gray-800 font-urbanist mb-2 cursor-pointer hover:underline">New & Featured</h6>
                 <h6 className="text-gray-800 font-urbanist mb-2 cursor-pointer hover:underline">Men</h6>
                 <h6 className="text-gray-800 font-urbanist mb-2 cursor-pointer hover:underline">Women</h6>
@@ -141,7 +146,7 @@ const Navbar = () => {
                 }}
                 onMouseLeave={()=>{
                 setAccessoriesActive(false)
-              }} className={`absolute w-48 translate-y-[0px] translate-x-[-46px] border border-t-0 h-auto p-4 pb-2 z-10 ${accessoryClass}`}>
+              }} className={`absolute w-48 translate-y-[0px] bg-white translate-x-[-46px] border border-t-0 h-auto p-4 pb-2 z-10 ${accessoryClass}`}>
                 <h6 className="text-gray-800 font-urbanist mb-2 cursor-pointer hover:underline">Jordan</h6>
                 <h6 className="text-gray-800 font-urbanist mb-2 cursor-pointer hover:underline">Socks</h6>
                 <h6 className="text-gray-800 font-urbanist mb-2 cursor-pointer hover:underline">Hats & Headwear</h6>
@@ -159,7 +164,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="h-full md:w-40 w-44 flex justify-evenly items-center">
+        <div className="h-full bord md:w-40 w-44 flex justify-evenly items-center">
 
           <span className="hover:bg-gray-200 cursor-pointer p-2 rounded-full relative">
             <svg
@@ -198,7 +203,7 @@ const Navbar = () => {
           </span>
 
           <span onClick={()=>{
-            setMenuActive(!isMenuActive)
+              toggleMainMenu()
           }} className="hover:bg-gray-200 cursor-pointer p-2 rounded-full relative lg:hidden">
             {menuSvg}
           </span>
@@ -206,7 +211,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className={`absolute lg:hidden w-full overflow-hidden top-full ${menuHeight} pb-10 border-b flex-col items-center text-center transition-height linear duration-500`}>
+      <div className={`absolute bg-white lg:hidden w-full overflow-hidden top-full ${menuHeight} pb-10 border-b flex-col items-center text-center transition-height linear duration-500`}>
         <h6 className="text-2xl mt-6 font-urbanist font-bold tracking-wide hover:underline cursor-pointer">Home</h6>
         <div className="relative mt-4 p-0">  
           <button onClick={()=>{
