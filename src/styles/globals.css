@@ -14,19 +14,26 @@
     @apply text-lg font-urbanist font-medium tracking-wide  flex
 }
 
+/* body{
+    width: 100vw !important;
+}
 
-
+._next {
+    background-color: #2b7eb5;
+} */
 
 ::-webkit-scrollbar {
     background-color: transparent !important;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track{
+    width: 10px;
     background-color: transparent !important;
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: #000 !important;
+    background-color: #747474 !important;
 }
 
 body::-webkit-scrollbar{

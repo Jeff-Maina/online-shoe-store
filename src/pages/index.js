@@ -137,7 +137,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full h-auto flex-col items-center justify-center pl-4">
-          <h1 className="md:text-center md:text-[84px] text-6xl md:w-[8em] m-auto leading-[23px] md:leading-[58px] text-gray-900 font-passion_one tracking-tight md:my-16 md:mb-6 my-4">
+          <h1 className="md:text-center md:text-[84px] text-6xl md:w-[8em] m-auto leading-[43px] md:leading-[58px] text-gray-900 font-passion_one tracking-tight md:my-16 my-4 md:mb-6 ">
             BRING THE ENERGY
           </h1>
           <p className="md:text-center font-urbanist text-md md:w-auto w-96">
@@ -149,6 +149,57 @@ export default function Home() {
             </button>
           </div>
           </div>
+      </div>
+      <div className="relative w-full md:mt-28 mb-8">
+        <h1 className="lg:ml-12 ml-4 md:text-2xl text-2xl text-gray-800 mb-12 mt-14 font-urbanist tracking-wide">Fresh Sale Styles</h1>
+        <div className="absolute pb-0 top-0 flex items-end justify-end right-0 h-30 pr-2 md:pr-10 w-60">
+          <button className="md:w-12 md:h-12 w-10 h-10 cursor-pointer bg-gray-300 ml-2 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height='38'width='38' id="arrow"><path fill="#134563" d="M37.9 46 24.1 32.3l13.8-13.7 2 2-11.8 11.7L39.9 44l-2 2"></path></svg>
+          </button>
+          <button className="md:w-12 md:h-12 w-10 h-10 cursor-pointer bg-gray-300 ml-2 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" height='38'width='38' enable-background="new 0 0 64 64" viewBox="0 0 64 64" id="arrow"><path fill="#134563" d="m-210.9-289-2-2 11.8-11.7-11.8-11.7 2-2 13.8 13.7-13.8 13.7" transform="translate(237 335)"></path></svg>
+          </button>
+        </div>
+        <div className="w-full box-border lg:px-12  h-auto">
+          <div style={{ scrollSnapType: 'x mandatory' }} className="w-full h-auto overflow-x-auto whitespace-nowrap">
+            <div style={{scrollSnapAlign: "center"}} className="w-1/3 auto h-full min-w-[370px] inline-block mr-4">
+              <img className="hidden lg:flex w-full h-full" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_582,c_limit/a35196f9-5f37-416f-a368-a865fe7f45b8/react-infinity-3-womens-road-running-shoes-XpNmlR.png" alt="" />
+              <img className="w-full h-full lg:hidden" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_309,c_limit/a35196f9-5f37-416f-a368-a865fe7f45b8/react-infinity-3-womens-road-running-shoes-XpNmlR.png" alt="" />
+            </div>
+            <div style={{scrollSnapAlign: "center"}} className="w-1/3 auto h-full min-w-[370px] inline-block mr-4">
+              <img className="hidden lg:flex w-full h-full" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_582,c_limit/5401287f-61b1-4c46-836d-6f4897d4ff1f/wio-9-womens-road-running-shoes-0MS1bT.png" alt="" />
+              <img className="w-full h-full lg:hidden" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_309,c_limit/5401287f-61b1-4c46-836d-6f4897d4ff1f/wio-9-womens-road-running-shoes-0MS1bT.png" alt="" />
+            </div>
+            <div style={{scrollSnapAlign: "center"}} className="w-1/3 auto h-full min-w-[370px] inline-block mr-4">
+              <img className="hidden lg:flex w-full h-full" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_582,c_limit/fc847fa4-3f1e-450b-9343-844504ac306e/indy-plunge-cutout-womens-medium-support-padded-sports-bra-WsnzTx.png" alt="" />
+              <img className="w-full h-full lg:hidden" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_309,c_limit/fc847fa4-3f1e-450b-9343-844504ac306e/indy-plunge-cutout-womens-medium-support-padded-sports-bra-WsnzTx.png" alt="" />
+            </div>
+            <div style={{scrollSnapAlign: "center"}} className="w-1/3 auto h-full min-w-[370px] inline-block mr-4">
+              <img className="hidden lg:flex w-full h-full" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_582,c_limit/d70962ba-b254-488f-937e-6f0d9c442cc3/tempo-womens-brief-lined-running-shorts-FRBq5w.png" alt="" />
+              <img className="w-full h-full lg:hidden" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_309,c_limit/d70962ba-b254-488f-937e-6f0d9c442cc3/tempo-womens-brief-lined-running-shorts-FRBq5w.png" alt="" />
+            </div>
+            <div style={{scrollSnapAlign: "center"}} className="w-1/3 auto h-full min-w-[370px] inline-block mr-4">
+              <img className="hidden lg:flex w-full h-full" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_582,c_limit/a65c6560-0465-442c-b95a-5b924bd0a211/react-infinity-3-mens-road-running-shoes-1bRq75.png" alt="" />
+              <img className="w-full h-full lg:hidden" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_309,c_limit/a65c6560-0465-442c-b95a-5b924bd0a211/react-infinity-3-mens-road-running-shoes-1bRq75.png" alt="" />
+            </div>
+            <div style={{scrollSnapAlign: "center"}} className="w-1/3 auto h-full min-w-[370px] inline-block mr-4">
+              <img className="hidden lg:flex w-full h-full" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_582,c_limit/be6f4f03-835b-4ed7-89ef-b90b933cc29a/vaporfly-2-mens-road-racing-shoes-glWqfm.png" alt="" />
+              <img className="w-full h-full lg:hidden" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_309,c_limit/be6f4f03-835b-4ed7-89ef-b90b933cc29a/vaporfly-2-mens-road-racing-shoes-glWqfm.png" alt="" />
+            </div>
+            <div style={{scrollSnapAlign: "center"}} className="w-1/3 auto h-full min-w-[370px] inline-block mr-4">
+              <img className="hidden lg:flex w-full h-full" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_582,c_limit/561912b8-ed22-494e-aa0b-1ddd42b1af01/dri-fit-run-division-pinnacle-mens-short-sleeve-running-top-jwBVph.png" alt="" />
+              <img className="w-full h-full lg:hidden" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_309,c_limit/561912b8-ed22-494e-aa0b-1ddd42b1af01/dri-fit-run-division-pinnacle-mens-short-sleeve-running-top-jwBVph.png" alt="" />
+            </div>
+            <div style={{scrollSnapAlign: "center"}} className="w-1/3 auto h-full min-w-[370px] inline-block mr-4">
+              <img className="hidden lg:flex w-full h-full" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_582,c_limit/i1-30f8146d-ec78-47d1-87eb-7e4d23262af4/flex-stride-mens-7-2-in-1-running-shorts-pnwp4c.png" alt="" />
+              <img className="w-full h-full lg:hidden" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_309,c_limit/i1-30f8146d-ec78-47d1-87eb-7e4d23262af4/flex-stride-mens-7-2-in-1-running-shorts-pnwp4c.png" alt="" />
+            </div>
+            <div style={{scrollSnapAlign: "center"}} className="w-1/3 auto h-full min-w-[370px] inline-block mr-4">
+              <img className="hidden lg:flex w-full h-full" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_582,c_limit/a8c63aaf-0d27-4ebf-a92d-f9b45a92f5b4/air-max-90-ltr-big-kids-shoes-1wzwJM.png" alt="" />
+              <img className="w-full h-full lg:hidden" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_648,c_limit/a8c63aaf-0d27-4ebf-a92d-f9b45a92f5b4/air-max-90-ltr-big-kids-shoes-1wzwJM.png" alt="" />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );
