@@ -23,10 +23,18 @@ export default function Home() {
   }
    
   
+  let scrollLeft = () => {
+    let slider = document.getElementById('carousel');
+    slider.scrollLeft -= 370;
+  };
 
+  let scrollRight = () => {
+    let slider = document.getElementById('carousel');
+    slider.scrollLeft += 370;
+  };
 
   return (
-    <main className="h-auto m-0 pt-24">
+    <main className="h-auto m-0 pt-24 overflow-hidden">
       <div className="w-full box-border p-4 lg:px-12 h-auto bg-white">
         <div className="md:h-full w-full">
           <div className="h-full hidden w-full border lg:flex items-center justify-center">
@@ -153,15 +161,15 @@ export default function Home() {
       <div className="relative w-full md:mt-28 mb-8">
         <h1 className="lg:ml-12 ml-4 md:text-2xl text-2xl text-gray-800 mb-12 mt-14 font-urbanist tracking-wide">Fresh Sale Styles</h1>
         <div className="absolute pb-0 top-0 flex items-end justify-end right-0 h-30 pr-2 md:pr-10 w-60">
-          <button className="md:w-12 md:h-12 w-10 h-10 cursor-pointer bg-gray-300 ml-2 rounded-full flex items-center justify-center">
+          <button onClick={()=>{scrollLeft()}} className="md:w-12 md:h-12 w-10 h-10 cursor-pointer bg-gray-300 ml-2 rounded-full flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" height='38'width='38' id="arrow"><path fill="#134563" d="M37.9 46 24.1 32.3l13.8-13.7 2 2-11.8 11.7L39.9 44l-2 2"></path></svg>
           </button>
-          <button className="md:w-12 md:h-12 w-10 h-10 cursor-pointer bg-gray-300 ml-2 rounded-full flex items-center justify-center">
+          <button onClick={()=>{scrollRight()}} className="md:w-12 md:h-12 w-10 h-10 cursor-pointer bg-gray-300 ml-2 rounded-full flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" height='38'width='38' enable-background="new 0 0 64 64" viewBox="0 0 64 64" id="arrow"><path fill="#134563" d="m-210.9-289-2-2 11.8-11.7-11.8-11.7 2-2 13.8 13.7-13.8 13.7" transform="translate(237 335)"></path></svg>
           </button>
         </div>
         <div className="w-full box-border lg:px-12  h-auto">
-          <div style={{ scrollSnapType: 'x mandatory' }} className="w-full h-auto overflow-x-auto whitespace-nowrap">
+          <div id="carousel" style={{ scrollSnapType: 'x mandatory', scrollBehavior : "smooth" }} className="w-full h-auto overflow-x-auto whitespace-nowrap">
             <div style={{scrollSnapAlign: "center"}} className="w-1/3 auto h-full min-w-[370px] inline-block mr-4">
               <img className="hidden lg:flex w-full h-full" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_582,c_limit/a35196f9-5f37-416f-a368-a865fe7f45b8/react-infinity-3-womens-road-running-shoes-XpNmlR.png" alt="" />
               <img className="w-full h-full lg:hidden" src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/h_309,c_limit/a35196f9-5f37-416f-a368-a865fe7f45b8/react-infinity-3-womens-road-running-shoes-XpNmlR.png" alt="" />
@@ -201,6 +209,141 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <h1 className="lg:ml-12 ml-4 md:text-2xl mt-18 mb-6 text-2xl md:mt-28 text-gray-800 font-urbanist tracking-wide">Essentials</h1>
+      <div className="box-border px-4 lg:px-12 w-full h-auto mb-10 flex items-center justify-center">
+        <div className="w-full h-auto grid lg:grid-cols-4 md:grid-cols-2 gap-4 ">
+            <div className="border cursor-pointer w-full flex-col relative items-center justify-center h-auto">
+              <img className="m-auto w-full h-4/5 object-cover" src="./pictures/Air Jordan 1 Mid SE Craft/693cc53f-d228-472a-bf17-0a2e2c42daf7.webp" alt="shoe" />
+              <div className="w-full box-border px-11 h-20 absolute bottom-0">
+                  <h2 className="font-urbanist text-lg font-semibold text-gray-700">Air Jordan 1 Mid SE Craft</h2>
+                  <span className="w-full flex justify-between items-center">
+                    <span className="flex items-center justify-center">
+                      <h2 className="text-zinc-500 font-urbanist font-bold text-lg">Ksh. 12000</h2>
+                      <h2 className="text-zinc-500 font-urbanist font-light ml-4 text-md line-through">Ksh. 15000</h2>
+                    </span>
+                    <h2 className="text-lg text-green-400">1.76% off</h2>
+                  </span>
+              </div>
+            </div>
+            <div className="border cursor-pointer w-auto flex-col relative items-center justify-center h-auto">
+              <img className="w-full h-4/5 object-cover" src="./pictures/p1 Air Jordan 1 Mid SE/0d6a88ca-7ff8-4ad9-991b-b2e2a33cf66e.webp" alt="shoe" />
+              <div className="w-full box-border px-11 h-20 absolute bottom-0">
+                  <h2 className="font-urbanist text-lg font-semibold text-gray-700">Air Jordan 1 Mid SE Craft</h2>
+                  <span className="w-full flex justify-between items-center">
+                    <span className="flex items-center justify-center">
+                      <h2 className="text-zinc-500 font-urbanist font-bold text-lg">Ksh. 12000</h2>
+                      <h2 className="text-zinc-500 font-urbanist font-light ml-4 text-md line-through">Ksh. 15000</h2>
+                    </span>
+                    <h2 className="text-lg text-green-400">1.76% off</h2>
+                  </span>
+              </div>
+            </div>
+            <div className="border cursor-pointer w-auto flex-col relative items-center justify-center h-auto">
+              <img className="w-full h-4/5 object-cover" src="./pictures/p2 Air Jordan XXXVII Low PF/9cb30549-fe13-4998-ad7d-6c2876be3b5b.webp" alt="shoe" />
+              <div className="w-full box-border px-11 h-20 absolute bottom-0">
+                  <h2 className="font-urbanist text-lg font-semibold text-gray-700">Air Jordan 1 Mid SE Craft</h2>
+                  <span className="w-full flex justify-between items-center">
+                    <span className="flex items-center justify-center">
+                      <h2 className="text-zinc-500 font-urbanist font-bold text-lg">Ksh. 12000</h2>
+                      <h2 className="text-zinc-500 font-urbanist font-light ml-4 text-md line-through">Ksh. 15000</h2>
+                    </span>
+                    <h2 className="text-lg text-green-400">1.76% off</h2>
+                  </span>
+              </div>
+            </div>
+            <div className="border cursor-pointer w-auto flex-col relative items-center justify-center h-auto">
+              <img className="w-full h-4/5 object-cover" src="./pictures/p3 Jordan Why Not .6 PF/0b05a3de-0637-4af2-8844-ad6a381adcc4.webp" alt="shoe" />
+              <div className="w-full box-border px-11 h-20 absolute bottom-0">
+                  <h2 className="font-urbanist text-lg font-semibold text-gray-700">Air Jordan 1 Mid SE Craft</h2>
+                  <span className="w-full flex justify-between items-center">
+                    <span className="flex items-center justify-center">
+                      <h2 className="text-zinc-500 font-urbanist font-bold text-lg">Ksh. 12000</h2>
+                      <h2 className="text-zinc-500 font-urbanist font-light ml-4 text-md line-through">Ksh. 15000</h2>
+                    </span>
+                    <h2 className="text-lg text-green-400">1.76% off</h2>
+                  </span>
+              </div>
+            </div>
+            <div className="border cursor-pointer w-auto flex-col relative items-center justify-center h-auto">
+              <img className="w-full h-4/5 object-cover" src="./pictures/p4 Jordan Stay Loyal 2/thumbnail.webp" alt="shoe" />
+              <div className="w-full box-border px-11 h-20 absolute bottom-0">
+                  <h2 className="font-urbanist text-lg font-semibold text-gray-700">Air Jordan 1 Mid SE Craft</h2>
+                  <span className="w-full flex justify-between items-center">
+                    <span className="flex items-center justify-center">
+                      <h2 className="text-zinc-500 font-urbanist font-bold text-lg">Ksh. 12000</h2>
+                      <h2 className="text-zinc-500 font-urbanist font-light ml-4 text-md line-through">Ksh. 15000</h2>
+                    </span>
+                    <h2 className="text-lg text-green-400">1.76% off</h2>
+                  </span>
+              </div>
+            </div>
+            <div className="border cursor-pointer w-auto flex-col relative items-center justify-center h-auto">
+              <img className="w-full h-4/5 object-cover" src="./pictures/p5 Jordan Delta 3 Low/thumbnail.webp" alt="shoe" />
+              <div className="w-full box-border px-11 h-20 absolute bottom-0">
+                  <h2 className="font-urbanist text-lg font-semibold text-gray-700">Air Jordan 1 Mid SE Craft</h2>
+                  <span className="w-full flex justify-between items-center">
+                    <span className="flex items-center justify-center">
+                      <h2 className="text-zinc-500 font-urbanist font-bold text-lg">Ksh. 12000</h2>
+                      <h2 className="text-zinc-500 font-urbanist font-light ml-4 text-md line-through">Ksh. 15000</h2>
+                    </span>
+                    <h2 className="text-lg text-green-400">1.76% off</h2>
+                  </span>
+              </div>
+            </div>
+            <div className="border cursor-pointer w-auto flex-col relative items-center justify-center h-auto">
+              <img className="w-full h-4/5 object-cover" src="./pictures/p6 Air Jordan 13 Retro/thumbnail.webp" alt="shoe" />
+              <div className="w-full box-border px-11 h-20 absolute bottom-0">
+                  <h2 className="font-urbanist text-lg font-semibold text-gray-700">Air Jordan 1 Mid SE Craft</h2>
+                  <span className="w-full flex justify-between items-center">
+                    <span className="flex items-center justify-center">
+                      <h2 className="text-zinc-500 font-urbanist font-bold text-lg">Ksh. 12000</h2>
+                      <h2 className="text-zinc-500 font-urbanist font-light ml-4 text-md line-through">Ksh. 15000</h2>
+                    </span>
+                    <h2 className="text-lg text-green-400">1.76% off</h2>
+                  </span>
+              </div>
+            </div>
+            <div className="border cursor-pointer w-auto flex-col relative items-center justify-center h-auto">
+              <img className="w-full h-4/5 object-cover" src="./pictures/p7 Air Jordan 6 Retro/thumbnail.webp" alt="shoe" />
+              <div className="w-full box-border px-11 h-20 absolute bottom-0">
+                  <h2 className="font-urbanist text-lg font-semibold text-gray-700">Air Jordan 1 Mid SE Craft</h2>
+                  <span className="w-full flex justify-between items-center">
+                    <span className="flex items-center justify-center">
+                      <h2 className="text-zinc-500 font-urbanist font-bold text-lg">Ksh. 12000</h2>
+                      <h2 className="text-zinc-500 font-urbanist font-light ml-4 text-md line-through">Ksh. 15000</h2>
+                    </span>
+                    <h2 className="text-lg text-green-400">1.76% off</h2>
+                  </span>
+              </div>
+            </div>
+            <div className="border cursor-pointer w-auto flex-col relative items-center justify-center h-auto">
+              <img className="w-full h-4/5 object-cover" src="./pictures/p8 Air Jordan 1 Retro High OG/thumbnail.webp" alt="shoe" />
+              <div className="w-full box-border px-11 h-20 absolute bottom-0">
+                  <h2 className="font-urbanist text-lg font-semibold text-gray-700">Air Jordan 1 Mid SE Craft</h2>
+                  <span className="w-full flex justify-between items-center">
+                    <span className="flex items-center justify-center">
+                      <h2 className="text-zinc-500 font-urbanist font-bold text-lg">Ksh. 12000</h2>
+                      <h2 className="text-zinc-500 font-urbanist font-light ml-4 text-md line-through">Ksh. 15000</h2>
+                    </span>
+                    <h2 className="text-lg text-green-400">1.76% off</h2>
+                  </span>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div className="w-full h-auto flex-col items-center justify-center"> 
+          <h1 className="md:text-center md:text-[84px] text-6xl md:w-[8em] m-auto leading-[43px] md:leading-[58px] text-gray-900 font-passion_one tracking-tight md:my-16 my-4 md:mb-6 ">
+            THANKS FOR BEING HERE
+          </h1>
+          <p className="md:text-center font-urbanist text-md md:w-auto w-96">
+            Your Global Community awaits
+          </p>
+          <div className="w-full flex items-center md:justify-center my-6 md:my-8">
+            <button className="w-auto bg-black md:mx-3 mr-2 text-white md:text-md text-sm flex items-center justify-center cursor-pointe h-10 px-6 md:px-10 rounded-3xl hover:bg-zinc-700">
+             Join Us
+            </button>
+          </div>
+        </div>
     </main>
   );
 }
